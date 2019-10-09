@@ -8,7 +8,6 @@ def main():
     x = [0] * N
     for i in range(N):
         x[i] = 1 / xx[i];
-    print(x)
     y = [0.448, 0.432, 0.421, 0.417, 0.414, 0.412]
     POWERX = [0] * (2 * m);
     for k in range(2 * m):
