@@ -25,6 +25,16 @@ def main():
         for i in range(N):
             PRAW[l] += y[i] * pow(x[i], l)
     a = gauss(SUMX, PRAW, m + 1)
-    print(a)
+    print("\nКоэффициенты a = ", a)
+    S2 = 1 / (N - m - 1)
+    for i in range(N):
+        Sum = y[i]
+        for j in range(m + 1):
+            Sum -= a[m] * pow(x[i], m)
+        S2 += pow(Sum, 2)
+    S2 /= N - m - 1
+    sigma = pow(S2, 0.5)
+    print("Среднеквадратическое отклонение = ", sigma)
+
 
 main()
